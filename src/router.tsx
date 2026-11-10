@@ -7,6 +7,8 @@ export function getRouter() {
     scrollRestoration: true,
     defaultPreload: 'intent',
     defaultPreloadStaleTime: 0,
+    // Seamless page transitions via the View Transitions API
+    defaultViewTransition: true,
   })
 
   return router
