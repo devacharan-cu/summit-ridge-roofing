@@ -28,7 +28,7 @@ export const Route = createFileRoute('/_site/checkout/$slug')({
     return { offer, price: prices[offer.slug]?.formatted ?? offer.priceLabel }
   },
   head: ({ loaderData }) => ({
-    meta: [{ title: pageTitle(`${loaderData?.offer.title ?? 'Secure'} Checkout`) }],
+    meta: [{ title: pageTitle(`Secure Checkout: ${loaderData?.offer.title ?? 'Booking'}`) }],
   }),
   component: CheckoutPage,
 })
