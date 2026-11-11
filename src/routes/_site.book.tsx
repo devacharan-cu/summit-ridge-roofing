@@ -1,9 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { Offers, CtaBand } from '#/components/Sections'
 import { getOfferPrices } from '#/lib/api'
+import { pageTitle } from '#/config/site'
 
 export const Route = createFileRoute('/_site/book')({
-  head: () => ({ meta: [{ title: 'Book online: inspection, deposit, flat-rate services' }] }),
+  head: () => ({ meta: [{ title: pageTitle('Book Online') }] }),
   loader: () => getOfferPrices(),
   component: () => {
     const prices = Route.useLoaderData()

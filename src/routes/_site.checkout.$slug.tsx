@@ -15,7 +15,7 @@ import {
 } from '@whop/elements-react'
 import type { AddressElementHandle } from '@whop/elements-react'
 import { loadWhop } from '@whop/elements'
-import { site, offerBySlug, type Offer } from '#/config/site'
+import { site, offerBySlug, pageTitle, type Offer } from '#/config/site'
 import { confirmCheckout, getOfferPrices } from '#/lib/api'
 import { track } from '#/lib/track'
 
@@ -28,7 +28,7 @@ export const Route = createFileRoute('/_site/checkout/$slug')({
     return { offer, price: prices[offer.slug]?.formatted ?? offer.priceLabel }
   },
   head: ({ loaderData }) => ({
-    meta: [{ title: `${loaderData?.offer.title ?? 'Checkout'} · ${site.company.name}` }],
+    meta: [{ title: pageTitle(`${loaderData?.offer.title ?? 'Secure'} Checkout`) }],
   }),
   component: CheckoutPage,
 })

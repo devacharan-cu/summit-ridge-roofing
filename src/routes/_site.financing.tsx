@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Financing, CtaBand } from '#/components/Sections'
+import { pageTitle } from '#/config/site'
 
 export const Route = createFileRoute('/_site/financing')({
-  head: () => ({ meta: [{ title: 'Roof financing' }] }),
+  head: () => ({ meta: [{ title: pageTitle('Roof Financing') }] }),
   component: () => (
     <>
       <Financing h1 />

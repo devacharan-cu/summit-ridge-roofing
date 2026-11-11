@@ -254,6 +254,9 @@ export const site = {
   estimateServices: ['Roof repair', 'Full replacement', 'Storm / hail damage', 'Not sure — inspect it'],
 }
 
+/** Browser-tab title for a page: "Page name | Company name". Keeps every page consistent. */
+export const pageTitle = (page: string) => `${page} | ${site.company.name}`
+
 export type SiteConfig = typeof site
 export const offerBySlug = (slug: string) => site.offers.find((o) => o.slug === slug)
 export const serviceById = (id: string) => site.services.find((s) => s.id === id)

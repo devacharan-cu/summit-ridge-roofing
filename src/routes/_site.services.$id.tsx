@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { createFileRoute, Link, notFound } from '@tanstack/react-router'
-import { site, serviceById, offerBySlug } from '#/config/site'
+import { site, serviceById, offerBySlug, pageTitle } from '#/config/site'
 import { PageHead, CtaBand } from '#/components/Sections'
 import { Photo } from '#/components/Photo'
 import { track } from '#/lib/track'
@@ -12,7 +12,7 @@ export const Route = createFileRoute('/_site/services/$id')({
     return service
   },
   head: ({ loaderData }) => ({
-    meta: [{ title: `${loaderData?.name ?? 'Service'} · ${site.company.name}` }, { name: 'description', content: loaderData?.body ?? '' }],
+    meta: [{ title: pageTitle(loaderData?.name ?? 'Service') }, { name: 'description', content: loaderData?.body ?? '' }],
   }),
   component: ServicePage,
 })

@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { site, offerBySlug } from '#/config/site'
+import { site, offerBySlug, pageTitle } from '#/config/site'
 
 type Search = { offer?: string; payment?: string; status?: string; card?: string; setup?: string }
 
 export const Route = createFileRoute('/_site/thanks')({
+  head: () => ({ meta: [{ title: pageTitle('Payment Received') }, { name: 'robots', content: 'noindex' }] }),
   validateSearch: (s: Record<string, unknown>): Search => ({
     offer: typeof s.offer === 'string' ? s.offer : undefined,
     payment: typeof s.payment === 'string' ? s.payment : undefined,

@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { createFileRoute } from '@tanstack/react-router'
-import { site } from '#/config/site'
+import { pageTitle } from '#/config/site'
 import { proOverview, createFinalInvoice, type ProRow } from '#/lib/api'
 
 export const Route = createFileRoute('/_site/pro')({
-  head: () => ({ meta: [{ title: `Contractor console · ${site.company.name}` }, { name: 'robots', content: 'noindex' }] }),
+  head: () => ({ meta: [{ title: pageTitle('Contractor Console') }, { name: 'robots', content: 'noindex' }] }),
   component: Pro,
 })
 
