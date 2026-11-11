@@ -4,6 +4,16 @@ A reusable, config-driven website template for US roofing companies, built on **
 
 Live demo: https://summit-ridge-roofing-demo-dc.whop.site (add `?debug=1` to any URL to watch the `whop.track` events fire).
 
+## Documentation
+
+| Doc | What's in it |
+|---|---|
+| [docs/WHOP-SETUP.md](docs/WHOP-SETUP.md) | CLI login, creating the business, plans, API key scopes, secrets, deploy, free test checkout |
+| [docs/CUSTOMIZING.md](docs/CUSTOMIZING.md) | Re-skinning for another roofing company (one config file) |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Project layout, data flows (checkout, setup intent, leads, invoices), security notes |
+| [docs/PIXEL-EVENTS.md](docs/PIXEL-EVENTS.md) | The custom `whop.track` events and how to verify them |
+| [docs/DESIGN-AND-MOTION.md](docs/DESIGN-AND-MOTION.md) | Palette, type, motion system, performance and accessibility |
+
 ## What it demonstrates
 
 | Requirement | Where |
